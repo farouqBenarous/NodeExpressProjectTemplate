@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    .main.container
+        .row
+            .col-md-6.col-md-offset-3
+    h1  Set your location to show pick-up point near you
+    form(method='POST' action='/pickup')
+        div.form-group
+            label(for='country') country:
+            input#country.form-control(type='text', placeholder='country' name='country')
+        div.form-group
+            label(for='postcode') postcode :
+            input#postcode.form-control(type='text', placeholder='postcode' name='postcode')
+
+        button.btn.btn-primary(type='submit') Submit
+
